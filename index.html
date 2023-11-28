@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom task 3</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            width: 100%;
+            height: 100%;
+            background: red;
+        }
+
         input {
             height: 25px;
             width: 400px;
@@ -16,6 +29,32 @@
     </style>
 </head>
 <body>
-    <input type="text" placeholder="Write something...">
+    <input onkeypress="checkLength()" type="text" placeholder="Write something...">
+
+    <script>
+        
+        
+            function checkLength(){
+                var input = document.querySelector("input")
+                var body = document.querySelector("body")
+
+                    if (input.value.length < 2){
+                    body.style.background = "red"
+                } else if (input.value.length > 2){
+                    body.style.background = "green"
+            }
+        
+        }
+            
+
+            
+            
+
+                 
+      
+        
+
+
+    </script>
 </body>
 </html>
